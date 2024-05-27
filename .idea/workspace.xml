@@ -4,19 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3685e62b-e318-4d24-8efe-8830741fe38b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_credentials_manager.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Credential.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/JDBCConnectivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mysql-connector-j-8.4.0.jar" afterDir="false" />
+    <list default="true" id="3685e62b-e318-4d24-8efe-8830741fe38b" name="Changes" comment="first commit">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Authentication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/IOTerminal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/encryption/CaesarCipher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/encryption/DES.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/encryption/sample.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JDBCConnectivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JDBCConnectivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +28,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -42,39 +45,70 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.JDBCConnectivity.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/IdeaProjects/personal_credentials_manager/src/mysql-connector-j-8.4.0.jar&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/user/IdeaProjects/personal_credentials_manager/src/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.DES.executor": "Run",
+    "Application.IOTerminal.executor": "Run",
+    "Application.JDBCConnectivity.executor": "Run",
+    "Application.Login.executor": "Run",
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/user/IdeaProjects/personal_credentials_manager/src/mysql-connector-j-8.4.0.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/user/IdeaProjects/personal_credentials_manager/src/Main.java",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\user\IdeaProjects\personal_credentials_manager\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Login">
+    <configuration name="DES" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="encryption.DES" />
+      <module name="personal_credentials_manager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="encryption.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IOTerminal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="IOTerminal" />
+      <module name="personal_credentials_manager" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JDBCConnectivity" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="JDBCConnectivity" />
+      <module name="personal_credentials_manager" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Login" />
       <module name="personal_credentials_manager" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -89,7 +123,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Login" />
+        <item itemvalue="Application.IOTerminal" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.DES" />
         <item itemvalue="Application.JDBCConnectivity" />
       </list>
     </recent_temporary>
@@ -120,8 +157,24 @@
       <workItem from="1716606723792" duration="379000" />
       <workItem from="1716610934717" duration="3785000" />
       <workItem from="1716620431197" duration="36000" />
-      <workItem from="1716627287848" duration="1017000" />
+      <workItem from="1716627287848" duration="2067000" />
+      <workItem from="1716641738432" duration="5000" />
+      <workItem from="1716692558802" duration="1271000" />
+      <workItem from="1716694204460" duration="1530000" />
+      <workItem from="1716719577687" duration="2129000" />
+      <workItem from="1716736128613" duration="1831000" />
+      <workItem from="1716779380792" duration="5185000" />
+      <workItem from="1716825622269" duration="7641000" />
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1716629288903</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716629288903</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,5 +190,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
 </project>

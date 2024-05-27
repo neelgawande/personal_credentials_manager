@@ -4,7 +4,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class JDBCConnectivity {
-    public void establishConnection() {
+    public static Statement establishConnection() {
         String url = "jdbc:mysql://localhost:3306/user_credentials";
         String user = "root";
         String password = "root";
@@ -12,9 +12,11 @@ public class JDBCConnectivity {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection connection = DriverManager.getConnection(url,user,password);
             Statement statement = connection.createStatement();
+            return statement;
         }
         catch(Exception e){
             System.out.println(e);
+            return null;
         }
     }
     public void closeConnection() {

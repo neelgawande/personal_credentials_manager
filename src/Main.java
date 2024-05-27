@@ -1,9 +1,10 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException, ClassNotFoundException {
         System.out.println("Welcome to PERSONAL CREDENTIALS MANAGER");
         System.out.println("Choose one of the following options");
         System.out.println("1. Create a new account");
@@ -16,25 +17,13 @@ public class Main {
         String password = "root";
 
 //        User user1 = new User(101,"Neel", "haha");
-        User user1 = new User();
-//        user1.removeCredentials(101, "email");
-        user1.retrieveCredential(101,"email");
+//    User user1 = new User(101);
+//        User user2 = new User(102, "Vikas", "sanki");
 
-//        try{
-//            String name = user1.getUserName();
-//            String passwd = user1.getPasswd();
-//            Class.forName("com.mysql.cj.jdbc.Driver");
-//            Connection connection = DriverManager.getConnection(url,user,password);
-//            Statement statement = connection.createStatement();
-//            String sql = String.format("insert into users values(1,'%s','%s')",name,passwd);
-//            String toSql = sql;
-//            int resultSet = statement.executeUpdate(toSql);
-//            System.out.println("User created: " + resultSet);
-//
-//            connection.close();
-//        }
-//        catch(Exception e){
-//            System.out.println(e);
-//        }
+        User user2 = new User(102);
+        user2.addCredentials(102, "Mobile-PIN", "9087", "sanki");
+
+
+
     }
 }
