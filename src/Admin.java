@@ -49,7 +49,6 @@ public class Admin  {
     }
 
     // add a new admin
-
     public static Admin createNewAdmin(int id, String userName, String passwd) throws SQLException {
         Statement statement = null;
         statement = JDBCConnectivity.establishConnection();
@@ -61,4 +60,38 @@ public class Admin  {
         return null;
     }
 
+    // display all users
+    public void displayAllUsers() throws SQLException {
+        Statement statement = null;
+        statement = JDBCConnectivity.establishConnection();
+        String sql = String.format("SELECT * FROM users;");
+        ResultSet resultSet = statement.executeQuery(sql);
+        while(resultSet.next()) {
+            System.out.println("user id: "+resultSet.getInt("id"));
+            System.out.println("username: "+resultSet.getString("username")+"\n");
+        }
+    }
+
+    // display all users
+    public void displayAllAdmins() throws SQLException {
+        Statement statement = null;
+        statement = JDBCConnectivity.establishConnection();
+        String sql = String.format("SELECT * FROM admins;");
+        ResultSet resultSet = statement.executeQuery(sql);
+        while(resultSet.next()) {
+            System.out.println("user id: "+resultSet.getInt("id"));
+            System.out.println("username: "+resultSet.getString("username")+"\n");
+        }
+    }
+
+    // to add new user
+    public static User createNewUser(int userId, String userName, String passwd) throws SQLException {
+        Statement statement = null;
+        statement = JDBCConnectivity.establishConnection();
+        String sql1 = String.format("CREATE TABLE user_%d_credentials (cred_id int, cred_name varchar(50), cred_value varchar(50));", userId);
+        String sql2 = String.format("INSERT INTO users values(%d, '%s', '%s');", userId, userName, passwd);
+        int resultSet1 = statement.executeUpdate(sql1);
+        int resultSet2 = statement.executeUpdate(sql2);
+        return new User(userId, userName, passwd);
+    }
 }
