@@ -5,18 +5,19 @@ public class Login {
     public static Admin adminLogin(int id, String password) throws SQLException{
         Statement statement = JDBCConnectivity.establishConnection();
         String sql = String.format("SELECT * FROM admins WHERE id = %d", id);
+        assert statement != null;
         ResultSet response = statement.executeQuery(sql);
 
         while(response.next()){
             if(Authentication.authenticate(id, password)){
                 System.out.println("Login Successful for admin with id "+id);
-                Admin admin = new Admin(id, password);
-                return admin;
+                return new Admin(id, password);
             }
             else{
                 System.out.println("Login Failed. Password is incorrect");
                 return null;
             }
+
         }
         return null;
     }

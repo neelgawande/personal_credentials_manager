@@ -17,6 +17,7 @@ public class Admin  {
     }
 
     // Constructor
+    // these constructors will be used for existing admins.
     public Admin(int id, String passwd) throws SQLException {
         Statement statement = null;
         statement = JDBCConnectivity.establishConnection();

@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3685e62b-e318-4d24-8efe-8830741fe38b" name="Changes" comment="second commit:&#10;Added several new classes.&#10;1. Authentication: this class has the authenticate methods which authenticate the passowrd during login and push-pull requests.&#10; 2. IOTerminal: this class will handle all the user IO&#10; 3. Login: it's all in the name">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,6 +179,7 @@
       <workItem from="1716835165139" duration="603000" />
       <workItem from="1716835783038" duration="29000" />
       <workItem from="1716864505021" duration="1006000" />
+      <workItem from="1716870581043" duration="2844000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
