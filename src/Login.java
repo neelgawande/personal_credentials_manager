@@ -20,8 +20,23 @@ public class Login {
         }
         return null;
     }
-    public static void adminLogin(String username, String password){
+    public static Admin adminLogin(String username, String password) throws SQLException {
+        Statement statement = JDBCConnectivity.establishConnection();
+        String sql = String.format("SELECT * FROM admins WHERE username = '%s'", username);
+        ResultSet response = statement.executeQuery(sql);
 
+        while(response.next()){
+            if(Authentication.authenticate(username, password)){
+                System.out.println("Login Successful for admin with username "+username);
+                Admin admin = new Admin(username, password);
+                return admin;
+            }
+            else{
+                System.out.println("Login Failed. Password is incorrect");
+                return null;
+            }
+        }
+        return null;
     }
     public void userLogin() {
 
