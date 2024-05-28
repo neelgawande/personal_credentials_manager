@@ -97,4 +97,42 @@ public class Admin  {
         int resultSet2 = statement.executeUpdate(sql2);
         return new User(userId, userName, passwd);
     }
+
+    // to remove a user
+    public static void removeUser(int userId){
+        try{
+            Statement statement = null;
+            statement = JDBCConnectivity.establishConnection();
+            String sql = String.format("DELETE FROM users WHERE id=%d", userId);
+            String sql2 = String.format("DROP TABLE user_%d_credentials;", userId);
+            int res = statement.executeUpdate(sql);
+            int res2 = statement.executeUpdate(sql2);
+            if(res > 0) {
+                System.out.println("User removed");
+            }
+            else{
+                System.out.println("User not found");
+            }
+        }
+        catch(SQLException sqle){
+            System.out.println(sqle);
+        }
+    }
+    public static void removeAdmin(int userId){
+        try{
+            Statement statement = null;
+            statement = JDBCConnectivity.establishConnection();
+            String sql = String.format("DELETE FROM admins WHERE id=%d", userId);
+            int res = statement.executeUpdate(sql);
+            if(res > 0) {
+                System.out.println("User removed");
+            }
+            else{
+                System.out.println("User not found");
+            }
+        }
+        catch(SQLException sqle){
+            System.out.println(sqle);
+        }
+    }
 }

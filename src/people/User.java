@@ -65,6 +65,22 @@ public class User {
             System.out.println("Failed to add credential "+credentialName+ " to user id "+this.userId);
         }
     }
+    public void removeCredential(int credentialId,String credentialName, String passwd) throws SQLException {
+        Statement statement = null;
+        statement = JDBCConnectivity.establishConnection();
+        if(!Authentication.authenticateUser(this.userId, passwd)){
+            System.out.println("Incorrect password for userId "+this.userId);
+            return;
+        }
+        String sql = String.format("DELETE FROM user_%d_credentials WHERE cred_id=%d", this.userId, credentialId);
+        int resultSet = statement.executeUpdate(sql);
+        if(resultSet == 1) {
+            System.out.println("Successfully removed credential "+credentialName);
+        }
+        else{
+            System.out.println("Failed to remove credential "+credentialName);
+        }
+    }
     public String retrieveCredential(int credentialId, String passwd) throws SQLException {
         Statement statement = null;
         statement = JDBCConnectivity.establishConnection();

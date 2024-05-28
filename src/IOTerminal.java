@@ -11,8 +11,8 @@ public class IOTerminal {
         System.out.println("=========================================================================================");
         System.out.println("WELCOME TO PERSONAL CREDENTIALS MANAGER\n");
         System.out.println("Please select your login type:");
-        System.out.println("(1) people.Admin utility.Login");
-        System.out.println("(2) people.User utility.Login");
+        System.out.println("(1) Admin Login");
+        System.out.println("(2) User Login");
         System.out.println("(3) Exit");
         System.out.println("=========================================================================================");
         int choice = 0;
@@ -92,7 +92,9 @@ public class IOTerminal {
             System.out.println("(2) Add a new admin");
             System.out.println("(3) View all users");
             System.out.println("(4) View all admins");
-            System.out.println("(5) Exit");
+            System.out.println("(5) Remove a user");
+            System.out.println("(6) Remove an admin");
+            System.out.println("(7) Exit");
             System.out.println("\n=========================================================================================\n");
             int choice = scan.nextInt();
             switch (choice) {
@@ -161,9 +163,46 @@ public class IOTerminal {
                     admin.displayAllAdmins();
                     break;
                 }
-                case 5:
+                case 7:
                 {
                     keepRunning = false;
+                    break;
+                }
+                case 5: {  // remove a user
+                    try{
+                        System.out.println("enter id of the user to be removed");
+                        int id = scan.nextInt();
+                        System.out.println("Are you sure you want to remove the user? (y/n)");
+                        String answer = scan.next();
+                        if (answer.equalsIgnoreCase("y")) {
+                            Admin.removeUser(id);
+                        }
+                        else{
+                            System.out.println("Deletion cancelled.");
+                        }
+                    }
+                    catch(InputMismatchException ime) {
+                        System.out.println(ime);
+                    }
+                    break;
+                }
+                case 6:  // remove an admin
+                {
+                    try{
+                        System.out.println("enter id of the user to be removed");
+                        int id = scan.nextInt();
+                        System.out.println("Are you sure you want to remove the user? (y/n)");
+                        String answer = scan.next();
+                        if (answer.equalsIgnoreCase("y")) {
+                            Admin.removeAdmin(id);
+                        }
+                        else{
+                            System.out.println("Deletion cancelled.");
+                        }
+                    }
+                    catch(InputMismatchException ime) {
+                        System.out.println(ime);
+                    }
                     break;
                 }
             }
@@ -182,7 +221,8 @@ public class IOTerminal {
             System.out.println("(2) Retrieve a credential");
             System.out.println("(3) View your information");
             System.out.println("(4) View all your credentials");
-            System.out.println("(5) Exit");
+            System.out.println("(5) Remove a credential");
+            System.out.println("(6) Exit");
             System.out.println("\n=========================================================================================\n");
             int choice = scan.nextInt();
             switch (choice) {
@@ -266,11 +306,34 @@ public class IOTerminal {
                     user.displayAllCredentials(password);
                 }
                 break;
-                case 5:
+                case 6:
                 {
                     keepRunning = false;
                 }
                 break;
+                case 5:
+                {
+                    try{
+                        System.out.println("enter id of the credential to be removed");
+                        int id = scan.nextInt();
+                        System.out.println("enter name of the credential to be removed");
+                        String credName = scan.next();
+                        System.out.println("enter your password");
+                        String password = scan.next();
+                        System.out.println("Are you sure you want to remove the user? (y/n)");
+                        String answer = scan.next();
+                        if (answer.equalsIgnoreCase("y")) {
+                            user.removeCredential(id, credName, password);
+                        }
+                        else{
+                            System.out.println("Deletion cancelled.");
+                        }
+                    }
+                    catch(InputMismatchException ime) {
+                        System.out.println(ime);
+                    }
+                    break;
+                }
             }
         }
     }
