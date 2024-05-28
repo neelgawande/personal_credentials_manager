@@ -1,4 +1,7 @@
+package people;
+
 import java.sql.*;
+import utility.JDBCConnectivity;
 
 public class Admin  {
     private int userId;

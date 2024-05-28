@@ -1,3 +1,6 @@
+import people.Admin;
+import people.User;
+import utility.Authentication;
 import java.sql.SQLException;
 import java.util.*;
 
@@ -8,8 +11,8 @@ public class IOTerminal {
         System.out.println("=========================================================================================");
         System.out.println("WELCOME TO PERSONAL CREDENTIALS MANAGER\n");
         System.out.println("Please select your login type:");
-        System.out.println("(1) Admin Login");
-        System.out.println("(2) User Login");
+        System.out.println("(1) people.Admin utility.Login");
+        System.out.println("(2) people.User utility.Login");
         System.out.println("(3) Exit");
         System.out.println("=========================================================================================");
         int choice = 0;
@@ -40,13 +43,13 @@ public class IOTerminal {
         String username = scan.next();
         // verify admin
         if(!Authentication.verifyAdmin(username)){
-            System.out.println("Incorrect username. Admin not found.");
+            System.out.println("Incorrect username. people.Admin not found.");
             return;
         }
         System.out.println("Enter your password: ");
         String password = scan.next();
         if(!Authentication.verifyAdminPassword(username, password)){
-            System.out.println("Incorrect username. Admin not found.");
+            System.out.println("Incorrect username. people.Admin not found.");
             return;
         }
         // ACTIVATE THE ADMIN SESSION for an existing admin
@@ -64,7 +67,7 @@ public class IOTerminal {
         }
         // verify user
         if (!Authentication.verifyUser(id)) {
-            System.out.println("Incorrect username. User not found.");
+            System.out.println("Incorrect username. people.User not found.");
             return;
         }
         System.out.println("Enter your password: ");

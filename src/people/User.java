@@ -1,5 +1,9 @@
+package people;
+import utility.Authentication;
+import utility.Credential;
 import java.sql.*;
 import java.util.ArrayList;
+import utility.JDBCConnectivity;
 
 public class User {
     private int userId;

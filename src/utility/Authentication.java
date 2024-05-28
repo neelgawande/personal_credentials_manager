@@ -1,3 +1,5 @@
+package utility;
+
 import java.sql.*;
 
 public class Authentication {

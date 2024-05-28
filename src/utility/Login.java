@@ -1,3 +1,7 @@
+package utility;
+
+import people.Admin;
+import people.User;
 import java.sql.*;
 
 /**
@@ -13,11 +17,11 @@ public class Login {
 
         while(response.next()){
             if(Authentication.authenticate(id, password)){
-                System.out.println("Login Successful for admin with id "+id);
+                System.out.println("utility.Login Successful for admin with id "+id);
                 return new Admin(id, password);
             }
             else{
-                System.out.println("Login Failed. Password is incorrect");
+                System.out.println("utility.Login Failed. Password is incorrect");
             }
 
         }
@@ -30,11 +34,11 @@ public class Login {
 
         while(response.next()){
             if(Authentication.authenticate(username, password)){
-                System.out.println("Login Successful for admin with username "+username);
+                System.out.println("utility.Login Successful for admin with username "+username);
                 return new Admin(username, password);
             }
             else{
-                System.out.println("Login Failed. Password is incorrect");
+                System.out.println("utility.Login Failed. Password is incorrect");
             }
         }
         return null;
@@ -45,7 +49,7 @@ public class Login {
         ResultSet response = statement.executeQuery(sql);
         while(response.next()){
             if(Authentication.authenticateUser(id, password)){
-                System.out.println("Login Successful for user with id "+id);
+                System.out.println("utility.Login Successful for user with id "+id);
                 return new User(id, password);
             }
         }
@@ -54,7 +58,7 @@ public class Login {
 
     //TODO: REMOVE THIS ONCE IT IS NO LONGER NEEDED
     public static void main(String[] args) throws SQLException, NullPointerException {
-//        Admin admin = adminLogin(100, "burp");
+//        people.Admin admin = adminLogin(100, "burp");
 //        assert admin != null;
         User user1 = userLogin(101, "ngpasswd1");
         assert user1 != null;

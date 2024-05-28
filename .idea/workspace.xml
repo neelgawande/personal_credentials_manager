@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3685e62b-e318-4d24-8efe-8830741fe38b" name="Changes" comment="fourth commit: revised the User class.">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="3685e62b-e318-4d24-8efe-8830741fe38b" name="Changes" comment="fifth commit (endgame):&#10;The project is more or less ready now, I've added more methods for verification in the Authentication class and also implemented the IOTerminal class.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Authentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Authentication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Credential.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Credential.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/people/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Authentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/Authentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Credential.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/Credential.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/IOTerminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IOTerminal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JDBCConnectivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JDBCConnectivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/encryption/CaesarCipher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/encryption/DES.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/encryption/sample.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/people/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +91,7 @@
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Admin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Admin" />
+      <option name="MAIN_CLASS_NAME" value="people.Admin" />
       <module name="personal_credentials_manager" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -124,7 +118,7 @@
       </method>
     </configuration>
     <configuration name="Login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Login" />
+      <option name="MAIN_CLASS_NAME" value="utility.Login" />
       <module name="personal_credentials_manager" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -194,7 +188,7 @@
       <workItem from="1716890023534" duration="8277000" />
       <workItem from="1716900631641" duration="7732000" />
       <workItem from="1716912527410" duration="155000" />
-      <workItem from="1716912694636" duration="379000" />
+      <workItem from="1716912694636" duration="2249000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -220,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716873817437</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fifth commit (endgame):&#10;The project is more or less ready now, I've added more methods for verification in the Authentication class and also implemented the IOTerminal class.">
+      <option name="closed" value="true" />
+      <created>1716913470114</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1716913470114</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +244,7 @@
     <MESSAGE value="second commit:&#10;Added several new classes.&#10;1. Authentication: this class has the authenticate methods which authenticate the passowrd during login and push-pull requests.&#10; 2. IOTerminal: this class will handle all the user IO&#10; 3. Login: it's all in the name" />
     <MESSAGE value="third commit" />
     <MESSAGE value="fourth commit: revised the User class." />
-    <option name="LAST_COMMIT_MESSAGE" value="fourth commit: revised the User class." />
+    <MESSAGE value="fifth commit (endgame):&#10;The project is more or less ready now, I've added more methods for verification in the Authentication class and also implemented the IOTerminal class." />
+    <option name="LAST_COMMIT_MESSAGE" value="fifth commit (endgame):&#10;The project is more or less ready now, I've added more methods for verification in the Authentication class and also implemented the IOTerminal class." />
   </component>
 </project>
